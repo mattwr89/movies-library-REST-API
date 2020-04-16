@@ -1,7 +1,7 @@
-package pl.mattwr89.moviesapp.Controllers;
+package pl.mattwr89.moviesapp.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import pl.mattwr89.moviesapp.model.Movie;
+import pl.mattwr89.moviesapp.domain.entities.Movie;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -12,14 +12,14 @@ import java.util.Optional;
 @RequestMapping("/api/movies")
 public class MovieApiController {
 
-    private  List<Movie> movies;
+    private List<Movie> movies;
 
 
     public MovieApiController() {
-       movies = new ArrayList<>();
-       movies.add(new Movie(1L,"John Wick", LocalDate.of(2014,1,5)));
-       movies.add(new Movie(2L,"Django", LocalDate.of(2012,5,17)));
-       movies.add(new Movie(3L,"Rambo", LocalDate.of(1982,11,3)));
+        movies = new ArrayList<>();
+        movies.add(new Movie(1L,"John Wick", LocalDate.of(2014,1,5)));
+        movies.add(new Movie(2L,"Django", LocalDate.of(2012,5,17)));
+        movies.add(new Movie(3L,"Rambo", LocalDate.of(1982,11,3)));
     }
 
     @GetMapping("/all")
@@ -54,3 +54,4 @@ public class MovieApiController {
 
     }
 }
+
