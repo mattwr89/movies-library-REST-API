@@ -1,15 +1,13 @@
 package pl.mattwr89.moviesapp.controllers;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import pl.mattwr89.moviesapp.domain.entities.Movie;
 import pl.mattwr89.moviesapp.services.impl.DefaultMovieService;
 
-
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/movies") @Slf4j
+@RequestMapping("/api/movies")
 public class MovieApiController {
 
     private DefaultMovieService defaultMovieService;
