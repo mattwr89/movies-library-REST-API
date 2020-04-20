@@ -5,7 +5,6 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 import pl.mattwr89.moviesapp.domain.entities.Movie;
 import pl.mattwr89.moviesapp.domain.repositories.MovieRepository;
-import pl.mattwr89.moviesapp.services.MovieService;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;
@@ -13,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class DefaultMovieService implements MovieService {
+public class DefaultMovieService {
 
     private final MovieRepository movieRepository;
 
