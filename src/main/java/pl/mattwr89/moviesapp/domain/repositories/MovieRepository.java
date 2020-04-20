@@ -1,7 +1,7 @@
 package pl.mattwr89.moviesapp.domain.repositories;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import pl.mattwr89.moviesapp.domain.entities.Movie;
 
-public interface MovieRepository extends CrudRepository<Movie, Long> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 }
